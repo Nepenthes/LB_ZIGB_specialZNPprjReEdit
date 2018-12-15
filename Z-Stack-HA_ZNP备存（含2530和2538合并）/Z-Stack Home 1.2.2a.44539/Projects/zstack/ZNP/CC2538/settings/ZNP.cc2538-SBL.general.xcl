@@ -1,0 +1,15 @@
+"D:\IAR\Software\arm\bin\armproc.dll" 
+
+"D:\IAR\Software\arm\bin\armjlink2.dll" 
+
+"D:\Zigbee\Software\Z-Stack Home 1.2.2a.44539\Projects\zstack\ZNP\CC2538\ZNP SBL\Exe\ZNP.out" 
+
+--plugin "D:\IAR\Software\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR\Software\arm\config\debugger\TexasInstruments\CC2538.dmac" 
+
+--flash_loader "D:\IAR\Software\arm\config\flashloader\TexasInstruments\FlashCC2538RAM32K.board" 
+
+
+
+

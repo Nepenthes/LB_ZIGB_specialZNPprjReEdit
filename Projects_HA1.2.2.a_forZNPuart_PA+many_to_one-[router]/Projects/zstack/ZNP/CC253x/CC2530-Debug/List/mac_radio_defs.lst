@@ -1,0 +1,1125 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.10.1.4655 for 8051               22/Aug/2018  14:39:18
+# Copyright 2004-2017 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Components\mac\low_level\srf04\single_chip\mac_radio_defs.c
+#    Command line       =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EWFE4E.tmp
+#        (D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Components\mac\low_level\srf04\single_chip\mac_radio_defs.c
+#        -D FEATURE_SYSTEM_STATS -D POWER_SAVING -D xTC_LINKKEY_JOIN -D
+#        ZIGBEEPRO -D HAL_KEY=FALSE -D xZTOOL_P1 -lC
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\CC2530-Debug\List
+#        -lA
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\CC2530-Debug\List
+#        --diag_suppress Pe001,Pa010 -o
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\CC2530-Debug\Obj
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\Source\znp.cfg
+#        (-DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        "-DZSTACK_DEVICE_BUILD=(DEVICE_BUILD_COORDINATOR | DEVICE_BUILD_ROUTER
+#        | DEVICE_BUILD_ENDDEVICE)" -DNWK_AUTO_POLL -DZNP_RUN_WDOG=FALSE
+#        -DZNP_UART_BAUD=HAL_UART_BR_115200 -DZIGBEEPRO -DZIGBEE_FRAGMENTATION
+#        -DINTER_PAN -DOSAL_CLOCK -DOSAL_SAPI=FALSE -DSAPI_CB_FUNC=FALSE
+#        -DHOLD_AUTO_START -DNV_RESTORE -DNV_INIT -DNUM_DISC_ATTEMPTS=0
+#        -DMT_UTIL_FUNC -DMT_SYS_FUNC -DMT_AF_FUNC -DMT_SAPI_FUNC
+#        -DMT_SAPI_CB_FUNC -DMT_ZDO_CB_FUNC -DMT_ZDO_FUNC -DMT_ZDO_MGMT
+#        -DMT_ZDO_EXTENSIONS -DMT_APP_FUNC) -f
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+#        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000)
+#        -f
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\Tools\CC2530DB\f8wZCL.cfg
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\Source\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\Source\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\SE\Source\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\ZMain\TI2530ZNP\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\hal\include\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\hal\target\CC2530ZNP\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\mac\include\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\mac\high_level\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\mt\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\osal\include\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\services\ecc\binary163\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\services\ecc\binary283\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\services\saddr\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\services\sdata\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\af\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\nwk\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\sapi\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\sec\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\sys\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\zcl\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\stack\zdo\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\zmac\
+#        -I
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\..\..\..\..\Components\zmac\f8w\
+#        -Ohz --require_prototypes --no_code_motion)
+#    Locale             =  Chinese (Simplified)_People's Republic of China.936
+#    List file          =  
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\CC2530-Debug\List\mac_radio_defs.lst
+#    Object file        =  
+#        D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Projects\zstack\ZNP\CC253x\CC2530-Debug\Obj\mac_radio_defs.r51
+#
+###############################################################################
+
+D:\Software_zigbee\Z-StackPrj_reEdit\Projects_HA1.2.2.a_forZNPuart_PA\Components\mac\low_level\srf04\single_chip\mac_radio_defs.c
+      1          /**************************************************************************************************
+      2            Filename:       mac_radio_defs.c
+      3            Revised:        $Date: 2015-02-17 14:17:44 -0800 (Tue, 17 Feb 2015) $
+      4            Revision:       $Revision: 42683 $
+      5          
+      6            Description:    Describe the purpose and contents of the file.
+      7          
+      8          
+      9            Copyright 2006-2015 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /* ------------------------------------------------------------------------------------------------
+     41           *                                             Includes
+     42           * ------------------------------------------------------------------------------------------------
+     43           */
+     44          #include "mac_radio_defs.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+     45          #include "hal_types.h"
+     46          #include "hal_assert.h"
+     47          #include "hal_mcu.h"
+     48          #include "mac_pib.h"
+     49          
+     50          #include "ioCC2530.h"
+     51          
+     52          /* ------------------------------------------------------------------------------------------------
+     53           *                                        Global Variables
+     54           * ------------------------------------------------------------------------------------------------
+     55           */
+     56          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     57          uint8 reqTxBoost = FALSE;  /* CC2533/34-specific register settings to achieve highest Tx power. */
+   \                     reqTxBoost:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     58          uint8 paLnaChip = PA_LNA_NONE;
+   \                     paLnaChip:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     59             
+     60          #if defined HAL_PA_LNA_SE2431L || defined MAC_RUNTIME_SE2431L
+     61            #define CPS_DIR         P0DIR
+     62            #define CPS_PIN_OUTPUT  BV(7)  
+     63              
+     64            #define ANT_CSD_SEL_DIR P1DIR 
+     65            #define CSD_PIN_OUTPUT   BV(3)  
+     66            #define ANT_SEL_OUTPUT   BV(0)
+     67          
+     68          #else
+     69            #define CPS_DIR         P0DIR
+     70            #define CPS_PIN_OUTPUT  0 
+     71              
+     72            #define ANT_CSD_SEL_DIR P1DIR 
+     73            #define CSD_PIN_OUTPUT   0 
+     74            #define ANT_SEL_OUTPUT   0 
+     75          
+     76          #endif
+     77          
+     78          /* ------------------------------------------------------------------------------------------------
+     79           *                                        Global Constants
+     80           * ------------------------------------------------------------------------------------------------
+     81           */
+     82          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+     83              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+     84              (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590 && \
+     85              !defined HAL_PA_LNA_SE2431L && !defined HAL_PA_LNA_CC2592)
+     86          
+     87          const uint8 CODE macRadioDefsTxPwrBare[] =
+     88          {
+     89            3,  /* tramsmit power level of the first entry */
+     90            (uint8)(int8)-22, /* transmit power level of the last entry */
+     91            /*   3 dBm */   0xF5,   /* characterized as  4.5 dBm in datasheet */
+     92            /*   2 dBm */   0xE5,   /* characterized as  2.5 dBm in datasheet */
+     93            /*   1 dBm */   0xD5,   /* characterized as  1   dBm in datasheet */
+     94            /*   0 dBm */   0xD5,   /* characterized as  1   dBm in datasheet */
+     95            /*  -1 dBm */   0xC5,   /* characterized as -0.5 dBm in datasheet */
+     96            /*  -2 dBm */   0xB5,   /* characterized as -1.5 dBm in datasheet */
+     97            /*  -3 dBm */   0xA5,   /* characterized as -3   dBm in datasheet */
+     98            /*  -4 dBm */   0x95,   /* characterized as -4   dBm in datasheet */
+     99            /*  -5 dBm */   0x95,
+    100            /*  -6 dBm */   0x85,   /* characterized as -6   dBm in datasheet */
+    101            /*  -7 dBm */   0x85,
+    102            /*  -8 dBm */   0x75,   /* characterized as -8   dBm in datasheet */
+    103            /*  -9 dBm */   0x75,
+    104            /* -10 dBm */   0x65,   /* characterized as -10  dBm in datasheet */
+    105            /* -11 dBm */   0x65,
+    106            /* -12 dBm */   0x55,   /* characterized as -12  dBm in datasheet */
+    107            /* -13 dBm */   0x55,
+    108            /* -14 dBm */   0x45,   /* characterized as -14  dBm in datasheet */
+    109            /* -15 dBm */   0x45,
+    110            /* -16 dBm */   0x35,   /* characterized as -16  dBm in datasheet */
+    111            /* -17 dBm */   0x35,
+    112            /* -18 dBm */   0x25,   /* characterized as -18  dBm in datasheet */
+    113            /* -19 dBm */   0x25,
+    114            /* -20 dBm */   0x15,   /* characterized as -20  dBm in datasheet */
+    115            /* -21 dBm */   0x15,
+    116            /* -22 dBm */   0x05    /* characterized as -22  dBm in datasheet */
+    117          };
+    118          #endif /* defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    119                    defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    120                    (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590 && \
+    121                    !defined HAL_PA_LNA_SE2431L && !defined HAL_PA_LNA_CC2592) */
+    122          
+    123          #if defined HAL_PA_LNA || defined MAC_RUNTIME_CC2591
+
+   \                                 In  segment CODE_C, align 1
+    124          const uint8 CODE macRadioDefsTxPwrCC2591[] =
+   \                     macRadioDefsTxPwrCC2591:
+   \   000000   14           DB 20
+   \   000001   0A           DB 10
+   \   000002   E5           DB 229
+   \   000003   D5           DB 213
+   \   000004   C5           DB 197
+   \   000005   B5           DB 181
+   \   000006   A5           DB 165
+   \   000007   A5           DB 165
+   \   000008   95           DB 149
+   \   000009   85           DB 133
+   \   00000A   85           DB 133
+   \   00000B   75           DB 117
+   \   00000C   65           DB 101
+    125          {
+    126            20,  /* tramsmit power level of the first entry */
+    127            (uint8)(int8)10, /* transmit power level of the last entry */
+    128            /*  20 dBm */   0xE5,   /* characterized as 20 dBm in datasheet */
+    129            /*  19 dBm */   0xD5,   /* characterized as 19 dBm in datasheet */
+    130            /*  18 dBm */   0xC5,   /* characterized as 18 dBm in datasheet */
+    131            /*  17 dBm */   0xB5,   /* characterized as 17 dBm in datasheet */
+    132            /*  16 dBm */   0xA5,   /* characterized as 16 dBm in datasheet */
+    133            /*  15 dBm */   0xA5,
+    134            /*  14 dBm */   0x95,   /* characterized as 14.5 dBm in datasheet */
+    135            /*  13 dBm */   0x85,   /* characterized as 13 dBm in datasheet */
+    136            /*  12 dBm */   0x85,
+    137            /*  11 dBm */   0x75,   /* characterized as 11.5 dBm in datasheet */
+    138            /*  10 dBm */   0x65    /* characterized as 10 dBm in datasheet */
+    139          };
+    140          #endif
+    141          
+    142          #if defined HAL_PA_LNA_CC2592 || defined MAC_RUNTIME_CC2592
+    143          const uint8 CODE macRadioDefsTxPwrCC2592[] =
+    144          {
+    145            21,  /* tramsmit power level of the first entry */
+    146            (uint8)(int8)10, /* transmit power level of the last entry */
+    147            /*  21 dBm */   0xF4,   /* characterized as 21.47 dBm */
+    148            /*  20 dBm */   0xD4,   /* characterized as 20.26 dBm */
+    149            /*  19 dBm */   0xC0,   /* characterized as 19.31 dBm */
+    150            /*  18 dBm */   0xA5,   /* characterized as 18.21 dBm */
+    151            /*  17 dBm */   0x95,   /* characterized as 17.14 dBm */
+    152            /*  16 dBm */   0x82,   /* characterized as 16.27 dBm */
+    153            /*  15 dBm */   0x72,   /* characterized as 15.15 dBm */
+    154            /*  14 dBm */   0x63,   /* characterized as 14.12 dBm */
+    155            /*  13 dBm */   0x61,   /* characterized as 13.24 dBm */
+    156            /*  12 dBm */   0x55,   /* characterized as 11.93 dBm */
+    157            /*  11 dBm */   0x50,   /* characterized as 10.90 dBm */
+    158            /*  10 dBm */   0x49    /* characterized as 10.29 dBm */
+    159          };
+    160          #endif
+    161          
+    162          #if defined HAL_PA_LNA_CC2590 || defined MAC_RUNTIME_CC2590
+    163          const uint8 CODE macRadioDefsTxPwrCC2590[] =
+    164          {
+    165            11,  /* tramsmit power level of the first entry */
+    166            (uint8)(int8)-15, /* transmit power level of the last entry */
+    167            /* Note that the characterization is preliminary */
+    168            /* 11 dBm */   0xF5,   /* characterized as 11.1 dBm */
+    169            /* 10 dBm */   0xF5,
+    170            /*  9 dBm */   0xE5,   /* characterized as 9.3 dBm */
+    171            /*  8 dBm */   0xD5,   /* characterized as 7.7 dBm */
+    172            /*  7 dBm */   0xD5,
+    173            /*  6 dBm */   0xC5,   /* characterized as 6.4 dBm */
+    174            /*  5 dBm */   0xB5,   /* characterized as 5.2 dBm */
+    175            /*  4 dBm */   0xA5,   /* characterized as 3.6 dBm */
+    176            /*  3 dBm */   0xA5,
+    177            /*  2 dBm */   0x95,   /* characterized as 1.6 dBm */
+    178            /*  1 dBm */   0x95,
+    179            /*  0 dBm */   0x85,   /* characterized as 0.4 dBm */
+    180            /* -1 dBm */   0x75,   /* characterized as -1.1 dBm */
+    181            /* -2 dBm */   0x75,
+    182            /* -3 dBm */   0x65,   /* characterized as -2.9 dBm */
+    183            /* -4 dBm */   0x65,
+    184            /* -5 dBm */   0x55,   /* characterized as -5.0 dBm */
+    185            /* -6 dBm */   0x55,
+    186            /* -7 dBm */   0x45,   /* characterized as -7.3 dBm*/
+    187            /* -8 dBm */   0x45,
+    188            /* -9 dBm */   0x45,
+    189            /* -10 dBm */  0x35,   /* characterized as -9.7 dBm */
+    190            /* -11 dBm */  0x25,   /* characterized as -11.3 dBm */
+    191            /* -12 dBm */  0x25,
+    192            /* -13 dBm */  0x15,   /* characterized as -13.3 dBm */
+    193            /* -14 dBm */  0x15,
+    194            /* -15 dBm */  0x05    /* characterized as -15.4 dBm */
+    195          };
+    196          #endif
+    197          
+    198          #if defined (HAL_PA_LNA_SE2431L) || defined (MAC_RUNTIME_SE2431L)
+    199          const uint8 CODE macRadioDefsTxPwrSE2431L[] =
+    200          {
+    201            22,  /* tramsmit power level of the first entry */
+    202            (uint8)(int8)10, /* transmit power level of the last entry */
+    203            /* Note that the characterization is preliminary */
+    204            /* 22 dBm */   0xF5,   /* characterized as 21.5 dBm */
+    205            /* 21 dBm */   0xE5,   /* characterized as 21.1 dBm */
+    206            /* 20 dBm */   0xD5,   /* characterized as 20.5 dBm */
+    207            /* 19 dBm */   0xC5,   /* characterized as 19.7 dBm */
+    208            /* 18 dBm */   0xB5,   /* characterized as 18.8 dBm */
+    209            /* 17 dBm */   0xA5,   /* characterized as 17.4 dBm */
+    210            /* 16 dBm */   0x95,   /* characterized as 15.5 dBm */
+    211            /* 15 dBm */   0x95,   /* characterized as 15.5 dBm */
+    212            /* 14 dBm */   0x85,   /* characterized as 14.2 dBm */
+    213            /* 13 dBm */   0x85,   /* characterized as 14.2 dBm */
+    214            /* 12 dBm */   0x75,   /* characterized as 12.3 dBm */
+    215            /* 11 dBm */   0x75,   /* characterized as 12.3 dBm */
+    216            /* 10 dBm */   0x65,   /* characterized as 10.6 dBm */
+    217          };
+    218          #endif
+    219          
+
+   \                                 In  segment CODE_C, align 1
+    220          const uint8 CODE macRadioDefsTxPwrBare0x95[] =
+   \                     macRadioDefsTxPwrBare0x95:
+   \   000000   07           DB 7
+   \   000001   EC           DB 236
+   \   000002   FD           DB 253
+   \   000003   FD           DB 253
+   \   000004   FD           DB 253
+   \   000005   EC           DB 236
+   \   000006   DC           DB 220
+   \   000007   DC           DB 220
+   \   000008   CC           DB 204
+   \   000009   BC           DB 188
+   \   00000A   AC           DB 172
+   \   00000B   AC           DB 172
+   \   00000C   9C           DB 156
+   \   00000D   9C           DB 156
+   \   00000E   8C           DB 140
+   \   00000F   7C           DB 124
+   \   000010   7C           DB 124
+   \   000011   6C           DB 108
+   \   000012   6C           DB 108
+   \   000013   5C           DB 92
+   \   000014   5C           DB 92
+   \   000015   5C           DB 92
+   \   000016   4C           DB 76
+   \   000017   4C           DB 76
+   \   000018   3C           DB 60
+   \   000019   3C           DB 60
+   \   00001A   2C           DB 44
+   \   00001B   2C           DB 44
+   \   00001C   1C           DB 28
+   \   00001D   1C           DB 28
+    221          {
+    222            7,  /* tramsmit power level of the first entry */
+    223            (uint8)(int8)-20, /* transmit power level of the last entry */
+    224            /*   7 dBm */   0xFD,   /* characterized as  7   dBm in datasheet */
+    225            /*   6 dBm */   0xFD,   /* clip to 7 dBm */
+    226            /*   5 dBm */   0xFD,   /* clip to 7 dBm */
+    227            /*   4 dBm */   0xEC,   /* characterized as  4.5 dBm in datasheet */
+    228            /*   3 dBm */   0xDC,   /* characterized as  3   dBm in datasheet */
+    229            /*   2 dBm */   0xDC,
+    230            /*   1 dBm */   0xCC,   /* characterized as  1.7 dBm in datasheet */
+    231            /*   0 dBm */   0xBC,   /* characterized as  0.3 dBm in datasheet */
+    232            /*  -1 dBm */   0xAC,   /* characterized as -1   dBm in datasheet */
+    233            /*  -2 dBm */   0xAC,
+    234            /*  -3 dBm */   0x9C,   /* characterized as -2.8 dBm in datasheet */
+    235            /*  -4 dBm */   0x9C,
+    236            /*  -5 dBm */   0x8C,   /* characterized as -4.1 dBm in datasheet */
+    237            /*  -6 dBm */   0x7C,   /* characterized as -5.9 dBm in datasheet */
+    238            /*  -7 dBm */   0x7C,
+    239            /*  -8 dBm */   0x6C,   /* characterized as -7.7 dBm in datasheet */
+    240            /*  -9 dBm */   0x6C,
+    241            /* -10 dBm */   0x5C,   /* characterized as -9.9 dBm in datasheet */
+    242            /* -11 dBm */   0x5C,
+    243            /* -12 dBm */   0x5C,   /* characterized as -9.9 dBm in datasheet */
+    244            /* -13 dBm */   0x4C,   /* characterized as -12.8 dBm in datasheet */
+    245            /* -14 dBm */   0x4C,
+    246            /* -15 dBm */   0x3C,   /* characterized as -14.9 dBm in datasheet */
+    247            /* -16 dBm */   0x3C,
+    248            /* -17 dBm */   0x2C,   /* characterized as -16.6 dBm in datasheet */
+    249            /* -18 dBm */   0x2C,
+    250            /* -19 dBm */   0x1C,   /* characterized as -18.7 dBm in datasheet */
+    251            /* -20 dBm */   0x1C    /* characterized as -18.7 dBm in datasheet */
+    252          };
+    253          
+    254          
+    255          
+    256          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    257              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    258              defined HAL_PA_LNA || defined HAL_PA_LNA_CC2590 || \
+    259              defined HAL_PA_LNA_SE2431L || defined HAL_PA_LNA_CC2592
+    260          
+    261          /* TX power table array */
+
+   \                                 In  segment CODE_C, align 1
+    262          const uint8 CODE *const CODE macRadioDefsTxPwrTables[] =
+   \                     macRadioDefsTxPwrTables:
+   \   000000   ....         DW macRadioDefsTxPwrCC2591
+    263          {
+    264          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    265              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    266              (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590 && \
+    267              !defined HAL_PA_LNA_SE2431L && !defined HAL_PA_LNA_CC2592)
+    268            macRadioDefsTxPwrBare,
+    269          #endif
+    270          
+    271          #if defined HAL_PA_LNA || defined MAC_RUNTIME_CC2591
+    272            macRadioDefsTxPwrCC2591,
+    273          #endif
+    274          
+    275          #if defined HAL_PA_LNA_CC2590 || defined MAC_RUNTIME_CC2590
+    276            macRadioDefsTxPwrCC2590,
+    277          #endif
+    278          
+    279          #if defined HAL_PA_LNA_SE2431L || defined MAC_RUNTIME_SE2431L
+    280            macRadioDefsTxPwrSE2431L,
+    281          #endif
+    282          
+    283          #if defined HAL_PA_LNA_CC2592 || defined MAC_RUNTIME_CC2592
+    284            macRadioDefsTxPwrCC2592,
+    285          #endif
+    286          };
+    287          
+    288          /* TX power table array. */
+    289          /* TODO: Please note that the cc2533 uses the
+    290           * same TXPOWER table with or without PA/LNA here.
+    291           */
+
+   \                                 In  segment CODE_C, align 1
+    292          const uint8 CODE *const CODE macRadioDefsTxPwrTables0x95[] =
+   \                     macRadioDefsTxPwrTables0x95:
+   \   000000   ....         DW macRadioDefsTxPwrBare0x95
+    293          {
+    294          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    295            (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590)
+    296            macRadioDefsTxPwrBare0x95,
+    297          #endif
+    298          
+    299          #if defined HAL_PA_LNA || defined MAC_RUNTIME_CC2591
+    300            macRadioDefsTxPwrBare0x95,
+    301          #endif
+    302          
+    303          #if defined HAL_PA_LNA_CC2590 || defined MAC_RUNTIME_CC2590
+    304            macRadioDefsTxPwrBare0x95,
+    305          #endif
+    306          };
+    307          
+    308          /* RSSI offset adjustment value array */
+
+   \                                 In  segment CODE_C, align 1
+    309          const int8 CODE macRadioDefsRssiAdj[] =
+   \                     macRadioDefsRssiAdj:
+   \   000000   FA           DB -6
+   \   000001   06           DB 6
+    310          {
+    311          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    312              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    313              (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590 && \
+    314              !defined HAL_PA_LNA_CC2590 && !defined HAL_PA_LNA_CC2592)
+    315            0,
+    316          #endif
+    317          
+    318          #if defined HAL_PA_LNA || defined MAC_RUNTIME_CC2591
+    319            -6, /* high gain mode */
+    320            6,  /* low gain mode */
+    321          #endif
+    322          
+    323          #if defined HAL_PA_LNA_CC2590 || defined MAC_RUNTIME_CC2590
+    324           -10,
+    325            0,
+    326          #endif
+    327          
+    328          #if defined HAL_PA_LNA_SE2431L || defined MAC_RUNTIME_SE2431L
+    329          -12,   /*high gain mode of SE2431L*/
+    330           0,    /*Low gain mode of SE2431L */
+    331          #endif
+    332          
+    333          #if defined HAL_PA_LNA_CC2592 || defined MAC_RUNTIME_CC2592
+    334           /* TBD Placeholder for CC2530+CC2592 */
+    335           -6,
+    336            6,
+    337          #endif
+    338          };
+    339          
+    340          
+    341          /* Sensitivity adjusts*/
+
+   \                                 In  segment CODE_C, align 1
+    342          const int8 CODE macRadioDefsSensitivityAdj[] =
+   \                     macRadioDefsSensitivityAdj:
+   \   000000   FF           DB -1
+    343          {
+    344          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    345            defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    346            (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590 && \
+    347            !defined HAL_PA_LNA_SE2431L && !defined HAL_PA_LNA_CC2592)
+    348            0,
+    349          #endif
+    350          
+    351          #if defined HAL_PA_LNA || defined MAC_RUNTIME_CC2591
+    352          /* -98.8 approximated to -98 MAC_RADIO_RECEIVER_SENSITIVITY_DBM -1 = -98 */
+    353            -1, 
+    354          #endif
+    355          
+    356          #if defined HAL_PA_LNA_CC2590 || defined MAC_RUNTIME_CC2590
+    357            -1,
+    358          #endif
+    359          
+    360          #if defined HAL_PA_LNA_SE2431L || defined MAC_RUNTIME_SE2431L
+    361          /* -101.8 approximated to -101. MAC_RADIO_RECEIVER_SENSITIVITY_DBM -4 = -101 */
+    362            -4, 
+    363          #endif
+    364          
+    365          #if defined HAL_PA_LNA_CC2592 || defined MAC_RUNTIME_CC2592
+    366           /* TBD Placeholder for CC2530+CC2592 */
+    367            -1,
+    368          #endif
+    369          };
+    370          
+    371          
+    372          /* Saturation adjusts*/
+
+   \                                 In  segment CODE_C, align 1
+    373          const int8 CODE macRadioDefsSaturationAdj[] =
+   \                     macRadioDefsSaturationAdj:
+   \   000000   00           DB 0
+    374          {
+    375          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    376            defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    377            (!defined HAL_PA_LNA && !defined HAL_PA_LNA_CC2590 && \
+    378            !defined HAL_PA_LNA_SE2431L && !defined HAL_PA_LNA_CC2592)
+    379            0,
+    380          #endif
+    381          
+    382          #if defined HAL_PA_LNA || defined MAC_RUNTIME_CC2591
+    383            0,  
+    384          #endif
+    385          
+    386          #if defined HAL_PA_LNA_CC2590 || defined MAC_RUNTIME_CC2590
+    387            0,
+    388          #endif
+    389          
+    390          #if defined HAL_PA_LNA_SE2431L || defined MAC_RUNTIME_SE2431L
+    391          /* 5.5 approximated to 5. MAC_RADIO_RECEIVER_SATURATION_DBM -5 = 5 */
+    392            -5,   
+    393          #endif
+    394          
+    395          #if defined HAL_PA_LNA_CC2592 || defined MAC_RUNTIME_CC2592
+    396           /* TBD Placeholder for CC2530+CC2592 */
+    397            0,
+    398          #endif
+    399          };
+    400          
+    401          #endif /* defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || ... */
+    402          
+    403          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    404              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    405              defined HAL_PA_LNA || defined HAL_PA_LNA_CC2590 || \
+    406              defined HAL_PA_LNA_SE2431L || defined HAL_PA_LNA_CC2592
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    407          uint8 macRadioDefsRefTableId = 0;
+   \                     macRadioDefsRefTableId:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    408          #endif
+    409          
+    410          /* RF observable control register value to output PA signal */
+    411          #define RFC_OBS_CTRL_PA_PD_INV        0x68
+    412          
+    413          /* RF observable control register value to output LNA signal */
+    414          #define RFC_OBS_CTRL_LNAMIX_PD_INV    0x6A
+    415          
+    416          /* OBSSELn register value to select RF observable 0 */
+    417          #define OBSSEL_OBS_CTRL0             0xFB
+    418          
+    419          /* OBSSELn register value to select RF observable 1 */
+    420          #define OBSSEL_OBS_CTRL1             0xFC
+    421          
+    422          
+    423          /**************************************************************************************************
+    424           * @fn          MAC_SelectRadioRegTable
+    425           *
+    426           * @brief       Select radio register table in case multiple register tables are included
+    427           *              in the build
+    428           *
+    429           * @param       txPwrTblIdx - TX power register value table index
+    430           * @param       rssiAdjIdx - RSSI adjustment value index
+    431           *
+    432           * @return      none
+    433           **************************************************************************************************
+    434           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    435          extern void MAC_SetRadioRegTable ( uint8 txPwrTblIdx, uint8 rssiAdjIdx )
+   \                     MAC_SetRadioRegTable:
+    436          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    437            /* Depending on compile flags, the parameters may not be used */
+    438            (void) txPwrTblIdx;
+    439            (void) rssiAdjIdx;
+    440          
+    441          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 ||  \
+    442              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592
+    443            if (txPwrTblIdx >= sizeof(macRadioDefsTxPwrTables)/sizeof(macRadioDefsTxPwrTables[0]))
+    444            {
+    445              txPwrTblIdx = 0;
+    446            }
+    447          #endif /* defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 */
+    448          
+    449          #if defined (MAC_RUNTIME_CC2591) || defined (MAC_RUNTIME_CC2590) || \
+    450              defined (MAC_RUNTIME_SE2431L)  || defined (MAC_RUNTIME_CC2592) || \
+    451              defined (HAL_PA_LNA) || defined (HAL_PA_LNA_CC2590) || \
+    452              defined (HAL_PA_LNA_SE2431L)  || defined (HAL_PA_LNA_CC2592)
+    453            if (rssiAdjIdx >= sizeof(macRadioDefsRssiAdj)/sizeof(macRadioDefsRssiAdj[0]))
+   \   000004   EA           MOV       A,R2
+   \   000005   C3           CLR       C
+   \   000006   9402         SUBB      A,#0x2
+   \   000008   4002         JC        ??MAC_SetRadioRegTable_0
+    454            {
+    455              rssiAdjIdx = 0;
+   \   00000A   7A00         MOV       R2,#0x0
+    456            }
+    457          
+    458            macRadioDefsRefTableId = (txPwrTblIdx << 4) | rssiAdjIdx;
+   \                     ??MAC_SetRadioRegTable_0:
+   \   00000C   E9           MOV       A,R1
+   \   00000D   C4           SWAP      A
+   \   00000E   54F0         ANL       A,#0xf0
+   \   000010   4A           ORL       A,R2
+   \   000011   90....       MOV       DPTR,#macRadioDefsRefTableId
+   \   000014   F0           MOVX      @DPTR,A
+    459          
+    460          #endif /* defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || .. */
+    461            
+    462           
+    463          #if defined (MAC_RUNTIME_CC2591) && defined (MAC_RUNTIME_CC2590) && \
+    464              defined (MAC_RUNTIME_SE2431L) && defined (MAC_RUNTIME_CC2592)
+    465          /* Determining PA LNA chip used from txPwrIdx*/  
+    466            switch (txPwrTblIdx)
+    467            {
+    468            case MAC_CC2591_TX_PWR_TABLE_IDX:
+    469              paLnaChip = PA_LNA_CC2591;
+    470              break;
+    471              
+    472            case MAC_CC2590_TX_PWR_TABLE_IDX:
+    473              paLnaChip = PA_LNA_CC2590;
+    474              break;
+    475              
+    476            case MAC_SE2431L_TX_PWR_TABLE_IDX:
+    477              paLnaChip = PA_LNA_SE2431L;
+    478              break;
+    479            
+    480            case MAC_CC2592_TX_PWR_TABLE_IDX:
+    481              paLnaChip = PA_LNA_CC2592;
+    482              break;
+    483              
+    484              default
+    485                paLnaChip = PA_LNA_NONE;
+    486              break;
+    487            }
+    488          #elif defined (MAC_RUNTIME_CC2591) || defined (HAL_PA_LNA)
+    489            paLnaChip = PA_LNA_CC2591;
+   \   000015   90....       MOV       DPTR,#paLnaChip
+   \   000018   7401         MOV       A,#0x1
+   \   00001A                REQUIRE ?Subroutine0
+   \   00001A                REQUIRE P0DIR
+   \   00001A                REQUIRE P1DIR
+   \   00001A                REQUIRE _A_P1
+   \   00001A                ; // Fall through to label ?Subroutine0
+    490          #elif defined (MAC_RUNTIME_CC2590) || defined (HAL_PA_LNA_CC2590)
+    491            paLnaChip = PA_LNA_CC2590;
+    492          #elif defined (MAC_RUNTIME_SE2431L) || defined (HAL_PA_LNA_SE2431L)
+    493            paLnaChip = PA_LNA_SE2431L;
+    494          #elif defined (MAC_RUNTIME_CC2592) || defined (HAL_PA_LNA_CC2592)
+    495            paLnaChip = PA_LNA_CC2592;
+    496          #else
+    497            paLnaChip = PA_LNA_NONE;
+    498          #endif
+    499            
+    500            if (paLnaChip == PA_LNA_SE2431L)
+    501            {
+    502              /* Setting CPS as Output by setting P0DIR = 0x80 */
+    503              CPS_DIR  |= CPS_PIN_OUTPUT; 
+    504              
+    505              /* Setting CSD and Antenns Select as Output by setting P1DIR = 0x9 */
+    506              ANT_CSD_SEL_DIR |= (CSD_PIN_OUTPUT | ANT_SEL_OUTPUT);
+    507              
+    508             /* Now EN or CSD line is controlled via software so setting it high here 
+    509              * to start the SE2431L frontend
+    510              */
+    511              HAL_PA_LNA_RX_CSD_HIGH();
+    512            }  
+    513          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   D083         POP       DPH
+   \   000003   D082         POP       DPL
+   \   000005   02....       LJMP      ?BRET
+    514          
+    515          
+    516          /**************************************************************************************************
+    517           * @fn          macRadioTurnOnPower
+    518           *
+    519           * @brief       Logic and sequence for powering up the radio.
+    520           *
+    521           * @param       none
+    522           *
+    523           * @return      none
+    524           **************************************************************************************************
+    525           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    526          MAC_INTERNAL_API void macRadioTurnOnPower(void)
+   \                     macRadioTurnOnPower:
+    527          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    528            /* Enable RF error trap */
+    529            MAC_MCU_RFERR_ENABLE_INTERRUPT();
+   \   000004   9061A5       MOV       DPTR,#0x61a5
+   \   000007   E0           MOVX      A,@DPTR
+   \   000008   D2E2         SETB      0xE0 /* A   */.2
+   \   00000A   F0           MOVX      @DPTR,A
+    530          
+    531          //#if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    532          //    defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592
+    533          //  /* table ID is referenced only when runtime configuration is enabled */
+    534          //  if (macRadioDefsRefTableId & 0xf0)
+    535          //#endif /* defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 */
+    536          //
+    537          //#if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    538          //    defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    539          //    defined HAL_PA_LNA || defined HAL_PA_LNA_CC2590 || \
+    540          //    defined HAL_PA_LNA_SE2431L || defined HAL_PA_LNA_CC2592
+    541          //  { /* either if compound statement or non-conditional compound statement */
+    542          //    
+    543          //    /* (Re-)Configure PA and LNA control signals to RF frontend chips.
+    544          //    * Note that The register values are not retained during sleep.
+    545          //    */
+    546          //    
+    547          //    if (paLnaChip == PA_LNA_SE2431L)
+    548          //    {
+    549          //      /* CPS or P0_7 maps closely to the HGM line */
+    550          //      HAL_PA_LNA_RX_HGM(); 
+    551          //  
+    552          //      /* EN or CSD line is controlled via software so setting it high here to start the SE2431L frontend */
+    553          //      HAL_PA_LNA_RX_CSD_HIGH();
+    554          //      
+    555          //      /* CTX or P1_1 maps closely to PAEN */
+    556          //      RFC_OBS_CTRL0 = RFC_OBS_CTRL_PA_PD_INV;
+    557          //      OBSSEL1       = OBSSEL_OBS_CTRL0;
+    558          //    }
+    559          //    else if(paLnaChip == PA_LNA_CC2592)
+    560          //    {
+    561          //      /* P1_1 -> PAEN */
+    562          //      RFC_OBS_CTRL0 = RFC_OBS_CTRL_PA_PD_INV;
+    563          //      OBSSEL1       = OBSSEL_OBS_CTRL0;
+    564          //      
+    565          //      /* P1_0 -> EN (LNA control) */
+    566          //      RFC_OBS_CTRL1 = RFC_OBS_CTRL_LNAMIX_PD_INV;
+    567          //      OBSSEL0       = OBSSEL_OBS_CTRL1;
+    568          //    }  
+    569          //    else 
+    570          //    {   
+    571          //      /* P1_1 -> PAEN */
+    572          //      RFC_OBS_CTRL0 = RFC_OBS_CTRL_PA_PD_INV;
+    573          //      OBSSEL1       = OBSSEL_OBS_CTRL0;
+    574          //      
+    575          //      /* P1_4 -> EN (LNA control) */
+    576          //      RFC_OBS_CTRL1 = RFC_OBS_CTRL_LNAMIX_PD_INV;
+    577          //      OBSSEL4       = OBSSEL_OBS_CTRL1;
+    578          //    }
+    579          //    
+    580          //    /* For any RX, change CCA settings for CC2591 compression workaround.
+    581          //    * This will override LNA control if CC2591_COMPRESSION_WORKAROUND
+    582          //    * flag is defined.
+    583          //    */
+    584          //  }
+    585          //#endif /* defined MAC_RUNTIME_CC2591 || ... || defined HAL_PA_LNA_SE2431L... */
+    586            
+    587          	/* P1_0 -> EN (LNA control) */
+    588          	RFC_OBS_CTRL0 = RFC_OBS_CTRL_PA_PD_INV;
+   \   00000B   9061EB       MOV       DPTR,#0x61eb
+   \   00000E   7468         MOV       A,#0x68
+   \   000010   F0           MOVX      @DPTR,A
+    589          	OBSSEL0       = OBSSEL_OBS_CTRL0;
+   \   000011   906243       MOV       DPTR,#0x6243
+   \   000014   74FB         MOV       A,#-0x5
+   \   000016   F0           MOVX      @DPTR,A
+    590          	P1SEL &= ~0x01;
+   \   000017   53F4FE       ANL       0xf4,#0xfe
+    591          	P1DIR |= 0x01;
+   \   00001A   43FE01       ORL       0xfe,#0x1
+    592          	P1_0   = 0;
+   \   00001D   C290         CLR       0x90.0
+    593          	  
+    594          	/* P1_1 -> PAEN */
+    595          	RFC_OBS_CTRL1 = RFC_OBS_CTRL_LNAMIX_PD_INV;
+   \   00001F   9061EC       MOV       DPTR,#0x61ec
+   \   000022   746A         MOV       A,#0x6a
+   \   000024   F0           MOVX      @DPTR,A
+    596          	OBSSEL1       = OBSSEL_OBS_CTRL1;
+   \   000025   906244       MOV       DPTR,#0x6244
+   \   000028   74FC         MOV       A,#-0x4
+   \   00002A   F0           MOVX      @DPTR,A
+    597          	P1SEL &= ~0x02;
+   \   00002B   53F4FD       ANL       0xf4,#0xfd
+    598          	P1DIR |= 0x02;
+   \   00002E   43FE02       ORL       0xfe,#0x2
+    599          	P1_1   = 0;
+   \   000031   C291         CLR       0x90.1
+    600          
+    601          	if (macChipVersion <= REV_B)
+   \   000033   90....       MOV       DPTR,#macChipVersion
+   \   000036   E0           MOVX      A,@DPTR
+   \   000037   C3           CLR       C
+   \   000038   9412         SUBB      A,#0x12
+   \   00003A   502D         JNC       ??macRadioTurnOnPower_0
+    602          	{
+    603          		/* radio initializations for disappearing RAM; PG1.0 and before only */
+    604          		MAC_RADIO_SET_PAN_ID(pMacPib->panId);
+   \   00003C   90....       MOV       DPTR,#macPib + 29
+   \   00003F   E0           MOVX      A,@DPTR
+   \   000040   906172       MOV       DPTR,#0x6172
+   \   000043   F0           MOVX      @DPTR,A
+   \   000044   90....       MOV       DPTR,#macPib + 30
+   \   000047   E0           MOVX      A,@DPTR
+   \   000048   906173       MOV       DPTR,#0x6173
+   \   00004B   F0           MOVX      @DPTR,A
+    605          		MAC_RADIO_SET_SHORT_ADDR(pMacPib->shortAddress);
+   \   00004C   90....       MOV       DPTR,#macPib + 33
+   \   00004F   E0           MOVX      A,@DPTR
+   \   000050   906174       MOV       DPTR,#0x6174
+   \   000053   F0           MOVX      @DPTR,A
+   \   000054   90....       MOV       DPTR,#macPib + 34
+   \   000057   E0           MOVX      A,@DPTR
+   \   000058   906175       MOV       DPTR,#0x6175
+   \   00005B   F0           MOVX      @DPTR,A
+    606          		MAC_RADIO_SET_IEEE_ADDR(pMacPib->extendedAddress.addr.extAddr);
+   \   00005C                ; Setup parameters for call to function macMemWriteRam
+   \   00005C   7908         MOV       R1,#0x8
+   \   00005E   7C..         MOV       R4,#(macPib + 49) & 0xff
+   \   000060   7D..         MOV       R5,#((macPib + 49) >> 8) & 0xff
+   \   000062   7A6A         MOV       R2,#0x6a
+   \   000064   7B61         MOV       R3,#0x61
+   \   000066   12....       LCALL     `??macMemWriteRam::?relay`; Banked call to: macMemWriteRam
+    607          	}
+    608          
+    609          	/* Turn on frame filtering */
+    610          	MAC_RADIO_TURN_ON_RX_FRAME_FILTERING();
+   \                     ??macRadioTurnOnPower_0:
+   \   000069   906180       MOV       DPTR,#0x6180
+   \   00006C   E4           CLR       A
+   \   00006D   F0           MOVX      @DPTR,A
+   \   00006E   E0           MOVX      A,@DPTR
+   \   00006F   4409         ORL       A,#0x9
+   \   000071   80..         SJMP      ?Subroutine0
+   \   000073                REQUIRE P1SEL
+   \   000073                REQUIRE P1DIR
+   \   000073                REQUIRE _A_P1
+    611          }
+    612          
+    613          
+    614          /**************************************************************************************************
+    615           * @fn          macRadioTurnOffPower
+    616           *
+    617           * @brief       Logic and sequence for powering down the radio.
+    618           *
+    619           * @param       none
+    620           *
+    621           * @return      none
+    622           **************************************************************************************************
+    623           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    624          MAC_INTERNAL_API void macRadioTurnOffPower(void)
+   \                     macRadioTurnOffPower:
+    625          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    626          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    627              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592
+    628            /* table ID is referenced only when runtime configuration is enabled */
+    629            if (macRadioDefsRefTableId & 0xf0)
+    630          #endif /* defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 */
+    631          
+    632          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590 || \
+    633              defined MAC_RUNTIME_SE2431L || defined MAC_RUNTIME_CC2592 || \
+    634              defined HAL_PA_LNA || defined HAL_PA_LNA_CC2590 || \
+    635              defined HAL_PA_LNA_SE2431L || defined HAL_PA_LNA_CC2592
+    636            { /* either if compound statement or non-conditional compound statement */
+    637              
+    638              if (paLnaChip == PA_LNA_SE2431L)
+   \   000004   90....       MOV       DPTR,#paLnaChip
+   \   000007   E0           MOVX      A,@DPTR
+   \   000008   6403         XRL       A,#0x3
+   \   00000A   7006         JNZ       ??macRadioTurnOffPower_0
+    639              {
+    640                HAL_PA_LNA_RX_LGM(); 
+   \   00000C   C287         CLR       0x80.7
+    641                HAL_PA_LNA_RX_CSD_LOW();
+   \   00000E   C293         CLR       0x90.3
+   \   000010   800F         SJMP      ??macRadioTurnOffPower_1
+    642              }
+    643              else 
+    644              {   
+    645                if (paLnaChip == PA_LNA_CC2591  ||  paLnaChip == PA_LNA_CC2590)
+   \                     ??macRadioTurnOffPower_0:
+   \   000012   E0           MOVX      A,@DPTR
+   \   000013   6401         XRL       A,#0x1
+   \   000015   6005         JZ        ??macRadioTurnOffPower_2
+   \   000017   E0           MOVX      A,@DPTR
+   \   000018   6402         XRL       A,#0x2
+   \   00001A   7005         JNZ       ??macRadioTurnOffPower_1
+    646                {
+    647                  /* Set direction of P1_4 to output and pulled down to prevent any leakage
+    648                   * when used to drive PA LNA		
+    649          		 */
+    650                  P1DIR |= BV(4);
+   \                     ??macRadioTurnOffPower_2:
+   \   00001C   43FE10       ORL       0xfe,#0x10
+    651                  P1_4 = 0;
+   \   00001F   C294         CLR       0x90.4
+    652                }
+    653              }
+    654            }
+    655            #endif /* defined MAC_RUNTIME_CC2591 || ... || defined HAL_PA_LNA_SE2431L */
+    656            /* Disable RF error trap */
+    657            MAC_MCU_RFERR_DISABLE_INTERRUPT();
+   \                     ??macRadioTurnOffPower_1:
+   \   000021   9061A5       MOV       DPTR,#0x61a5
+   \   000024   E0           MOVX      A,@DPTR
+   \   000025   C2E2         CLR       0xE0 /* A   */.2
+   \   000027   02....       LJMP      ?Subroutine0 & 0xFFFF
+   \   00002A                REQUIRE _A_P0
+   \   00002A                REQUIRE _A_P1
+   \   00002A                REQUIRE P1DIR
+    658          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??MAC_SetRadioRegTable::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    MAC_SetRadioRegTable
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??macRadioTurnOnPower::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    macRadioTurnOnPower
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??macRadioTurnOffPower::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    macRadioTurnOffPower
+    659          
+    660          
+    661          /**************************************************************************************************
+    662           *                                  Compile Time Integrity Checks
+    663           **************************************************************************************************
+    664           */
+    665          #if (HAL_CPU_CLOCK_MHZ != 32)
+    666          #error "ERROR: The only tested/supported clock speed is 32 MHz."
+    667          #endif
+    668          
+    669          #if (MAC_RADIO_RECEIVER_SENSITIVITY_DBM > MAC_SPEC_MIN_RECEIVER_SENSITIVITY)
+    670          #error "ERROR: Radio sensitivity does not meet specification."
+    671          #endif
+    672          
+    673          #if defined (HAL_PA_LNA) && defined (HAL_PA_LNA_CC2590)
+    674          #error "ERROR: HAL_PA_LNA and HAL_PA_LNA_CC2590 cannot be both defined."
+    675          #endif
+    676          
+    677          #if defined (HAL_PA_LNA) && defined (MAC_RUNTIME_CC2591)
+    678          #error "ERROR: HAL_PA_LNA and MAC_RUNTIME_CC2591 cannot be both defined."
+    679          #endif
+    680          
+    681          #if defined (HAL_PA_LNA_CC2590) && defined (MAC_RUNTIME_CC2590)
+    682          #error "ERROR: HAL_PA_LNA_CC2590 and MAC_RUNTIME_CC2590 cannot be both defined."
+    683          #endif
+    684          
+    685          #if defined (HAL_PA_LNA_SE2431L) && defined (MAC_RUNTIME_SE2431L)
+    686          #error "ERROR: HAL_PA_LNA_SE2431L and MAC_RUNTIME_SE2431L cannot be both defined."
+    687          #endif
+    688          
+    689          #if defined (HAL_PA_LNA_CC2592) && defined (MAC_RUNTIME_CC2592)
+    690          #error "ERROR: HAL_PA_LNA_CC2592 and MAC_RUNTIME_CC2592 cannot be both defined."
+    691          #endif
+    692          
+    693          #if defined (CC2591_COMPRESSION_WORKAROUND)
+    694          #warning "WARNING: Contact TI customer support if your reference design is based on CC2530-CC2591EM rev 2.0 or prior."
+    695          #endif
+    696          
+    697          /**************************************************************************************************
+    698           */
+
+   Maximum stack usage in bytes:
+
+   ISTACK Function
+   ------ --------
+      2   MAC_SetRadioRegTable
+      2   macRadioTurnOffPower
+      2   macRadioTurnOnPower
+        2   -> macMemWriteRam
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?Subroutine0
+      26  MAC_SetRadioRegTable
+       6  MAC_SetRadioRegTable::?relay
+       1  P0DIR
+       1  P1DIR
+       1  P1SEL
+       1  _A_P0
+       1  _A_P1
+       1  macRadioDefsRefTableId
+       2  macRadioDefsRssiAdj
+       1  macRadioDefsSaturationAdj
+       1  macRadioDefsSensitivityAdj
+      30  macRadioDefsTxPwrBare0x95
+      13  macRadioDefsTxPwrCC2591
+       2  macRadioDefsTxPwrTables
+       2  macRadioDefsTxPwrTables0x95
+      42  macRadioTurnOffPower
+       6  macRadioTurnOffPower::?relay
+     115  macRadioTurnOnPower
+       6  macRadioTurnOnPower::?relay
+       1  paLnaChip
+       1  reqTxBoost
+
+ 
+ 191 bytes in segment BANKED_CODE
+  18 bytes in segment BANK_RELAYS
+  51 bytes in segment CODE_C
+   5 bytes in segment SFR_AN
+   3 bytes in segment XDATA_Z
+ 
+  69 bytes of CODE     memory
+   0 bytes of DATA     memory (+ 5 bytes shared)
+ 191 bytes of HUGECODE memory
+   3 bytes of XDATA    memory
+
+Errors: none
+Warnings: none
